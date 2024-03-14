@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verif_num_tlf</title>
+    <script language="JavaScript">
+        function Verif(){
+            var monbouton=document.getElementById("monbouton");
+            ch=document.getElementById("T1").value;
+            //s'il y'a une valeur saisie dans le champ nom
+            if(ch.length==8 && !isNaN(ch))
+            {
+            verificationEffectuee = true;
+            }
+            else{
+            verificationEffectuee = false;
+            }
+            monbouton.disabled = !verificationEffectuee;
+
+        }
+
+    </script>
+    <script src="https://kit.fontawesome.com/624407aad3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form>
+        <input type="text" id="T1" oninput="Verif()">
+        <input type="button" id="monbouton" value="Appler" disabled>
+        <i class="fa-solid fa-phone " style="color: green;"></i>
+    </form>
+    
+</body>
+</html>
